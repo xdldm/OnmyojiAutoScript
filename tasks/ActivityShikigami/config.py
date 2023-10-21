@@ -16,7 +16,7 @@ class ShikigamiConfig(BaseModel):
 
 class ActivityShikigami(ConfigBase):
     scheduler: Scheduler = Field(default_factory=Scheduler)
-    # shikigami: ShikigamiConfig = Field(default_factory=ShikigamiConfig)
+    shikigami: ShikigamiConfig = Field(default_factory=ShikigamiConfig)
     general_climb: GeneralClimb = Field(default_factory=GeneralClimb)
     general_battle: GeneralBattleConfig = Field(default_factory=GeneralBattleConfig)
 
