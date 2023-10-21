@@ -8,11 +8,8 @@ from tasks.Component.config_scheduler import Scheduler
 from tasks.Component.config_base import ConfigBase, TimeDelta
 from tasks.Component.BaseActivity.config_activity import GeneralClimb
 
+
 class CommonActivityShikigami(ConfigBase):
     scheduler: Scheduler = Field(default_factory=Scheduler)
     general_climb: GeneralClimb = Field(default_factory=GeneralClimb)
     general_battle: GeneralBattleConfig = Field(default_factory=GeneralBattleConfig)
-
-
-
-
