@@ -204,7 +204,7 @@ class ScriptTask(GeneralBattle, GameUi, SwitchSoul, ExplorationAssets):
             # 结束流程
             if self.appear(self.I_E_EXPLORATION_CLICK) or self.appear(self.I_EXPLORATION_TITLE):
                 break    
-                self.swipe(self.S_SWIPE_BACKGROUND_RIGHT)
+                
     # 战斗流程
     def battle_process(self):
         # 进入指定章节
