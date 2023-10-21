@@ -13,7 +13,7 @@ class ConfigManual:
         > AreaBoss > GoldYoukai > ExperienceYoukai > Nian > Tako > RealmRaid > RyouToppa > DailyTrifles > Exploration
         > Hunt 
         > Orochi > OrochiMoans > OrochiJudgement > Sougenbi > FallenSun > EternitySea
-        > ActivityShikigami > WantedQuests
+        > ActivityShikigami > ActivityShikigami > WantedQuests
         > BondlingFairyland > EvoZone > GoryouRealm
         > TrueOrochi > RichMan
         > CollectiveMissions

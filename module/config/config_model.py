@@ -43,6 +43,7 @@ from tasks.Hunt.config import Hunt
 
 # 这一部分是活动的配置-----------------------------------------------------------------------------------------------------
 from tasks.ActivityShikigami.config import ActivityShikigami
+from tasks.CommonActivityShikigami.config import CommonActivityShikigami
 # ----------------------------------------------------------------------------------------------------------------------
 
 # 肝帝专属---------------------------------------------------------------------------------------------------------------
@@ -94,6 +95,7 @@ class ConfigModel(ConfigBase):
 
     # 这些是活动的
     activity_shikigami: ActivityShikigami = Field(default_factory=ActivityShikigami)
+    common_actiyity_shikigami: CommonActivityShikigami = Field(default_factory=CommonActivityShikigami)
 
     # 这些是肝帝专属
     bondling_fairyland: BondlingFairyland = Field(default_factory=BondlingFairyland)
