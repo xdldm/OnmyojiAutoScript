@@ -72,6 +72,8 @@ class ScriptTask(GeneralBattle, GameUi, SwitchSoul, ExplorationAssets):
                     count += 1
                     # 进入战斗环节
                     self.battle_process()
+                    time.sleep(1)
+                    self.screenshot()
                 if self.appear_then_click(self.I_EXPLORATION_TITLE):
                     self.open_expect_level()
 
