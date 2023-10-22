@@ -26,9 +26,6 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
         self.limit_count = config.general_climb.limit_count
 
 
-        # 选择是游戏的体力还是活动的体力
-        current_ap = config.general_climb.ap_mode
-
         # 流程应该是 在页面处：
         # 1. 判定计数是否超了，时间是否超了
         # 2. 如果是消耗活动体力，判定活动体力是否足够 如果是消耗一般的体力，判定一般体力是否足够
@@ -42,6 +39,8 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
             if self.current_count >= self.limit_count:
                 logger.info("Count out")
                 break
+            while 1:
+                self.is_ticket()
             # 2
             self.wait_until_appear(self.I_FIRE)
 
@@ -61,7 +60,12 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
         self.set_next_run(task="ActivityShikigami", success=True)
         raise TaskEnd
 
-
+    def is_ticket(self) -> bool:
+        # 判断是否还有挑战次数
+        self.screenshot()
+        cu, res, total = self.O_NUMBER.ocr(self.device.image)
+        logger.info(cu, res, total)
+        return True
 
 
 

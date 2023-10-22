@@ -1,0 +1,11 @@
+[
+  {
+    "itemName": "number",
+    "roiFront": "1167,673.4000000000001,86.60000000000014,33.19999999999993",
+    "roiBack": "0,0,100,100",
+    "mode": "DigitCounter",
+    "method": "Default",
+    "keyword": "",
+    "description": "挑战次数"
+  }
+]

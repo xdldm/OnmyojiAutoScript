@@ -15,3 +15,8 @@ class ActivityShikigamiAssets:
 	I_FIRE = RuleImage(roi_front=(1137,578,100,100), roi_back=(1137,578,100,100), threshold=0.8, method="Template matching", file="./tasks/ActivityShikigami/as/as_fire.png")
 
 
+	# Ocr Rule Assets
+	# 挑战次数 
+	O_NUMBER = RuleOcr(roi=(1167,673.4000000000001,86.60000000000014,33.19999999999993), area=(0,0,100,100), mode="DigitCounter", method="Default", keyword="", name="number")
+
+
