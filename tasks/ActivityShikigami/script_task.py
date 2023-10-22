@@ -47,9 +47,8 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
             if self.current_count >= self.limit_count:
                 logger.info("Count out")
                 break
-            while 1:
-                self.is_ticket()
-                time.sleep(1)
+            if not self.is_ticket():
+                break
             # 2
             self.wait_until_appear(self.I_FIRE)
 
