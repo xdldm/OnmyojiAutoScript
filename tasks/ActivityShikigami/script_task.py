@@ -20,7 +20,7 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
         # 判断是否还有挑战次数
         self.screenshot()
         cu, res, total = self.O_NUMBER.ocr(self.device.image)
-        if res == 0 and total-cu == 0:
+        if res == 0 and total != 0:
             logger.info("没有挑战次数了")
             return False
         return True
