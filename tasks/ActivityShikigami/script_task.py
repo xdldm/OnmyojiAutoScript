@@ -16,11 +16,14 @@ from module.exception import TaskEnd
 
 class ScriptTask(BaseActivity, ActivityShikigamiAssets):
 
-    def is_ticket(self) -> None:
+    def is_ticket(self) -> bool:
         # 判断是否还有挑战次数
         self.screenshot()
         cu, res, total = self.O_NUMBER.ocr(self.device.image)
-        logger.info(cu, res, total)
+        if res == 0 and total-cu == 0:
+            logger.info("没有挑战次数了")
+            return False
+        return True
 
 
     def run(self) -> None:
@@ -46,7 +49,8 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
             if self.current_count >= self.limit_count:
                 logger.info("Count out")
                 break
-            self.is_ticket()
+            if not self.is_ticket():
+                break
             # 2
             self.wait_until_appear(self.I_FIRE)
 

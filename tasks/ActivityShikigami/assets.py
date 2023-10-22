@@ -17,6 +17,6 @@ class ActivityShikigamiAssets:
 
 	# Ocr Rule Assets
 	# 挑战次数 
-	O_NUMBER = RuleOcr(roi=(1167,673.4000000000001,86.60000000000014,33.19999999999993), area=(0,0,100,100), mode="DigitCounter", method="Default", keyword="", name="number")
+	O_NUMBER = RuleOcr(roi=(1167,673,86,33), area=(0,0,100,100), mode="DigitCounter", method="Default", keyword="", name="number")
 
 
