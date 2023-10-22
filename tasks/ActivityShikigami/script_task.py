@@ -16,6 +16,14 @@ from module.exception import TaskEnd
 
 class ScriptTask(BaseActivity, ActivityShikigamiAssets):
 
+    def is_ticket(self) -> bool:
+        # 判断是否还有挑战次数
+        self.screenshot()
+        cu, res, total = self.O_NUMBER.ocr(self.device.image)
+        logger.info(cu, res, total)
+        return True
+
+
     def run(self) -> None:
 
         config = self.config.activity_shikigami
@@ -41,6 +49,7 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
                 break
             while 1:
                 self.is_ticket()
+                time.sleep(1)
             # 2
             self.wait_until_appear(self.I_FIRE)
 
@@ -60,12 +69,7 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
         self.set_next_run(task="ActivityShikigami", success=True)
         raise TaskEnd
 
-    def is_ticket(self) -> bool:
-        # 判断是否还有挑战次数
-        self.screenshot()
-        cu, res, total = self.O_NUMBER.ocr(self.device.image)
-        logger.info(cu, res, total)
-        return True
+
 
 
 
