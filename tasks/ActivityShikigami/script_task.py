@@ -23,6 +23,7 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
         if res == 0 and total != 0:
             logger.info("没有挑战次数了")
             return False
+        logger.info("剩余挑战次数:"+str(res)+"次")
         return True
 
 
@@ -49,11 +50,11 @@ class ScriptTask(BaseActivity, ActivityShikigamiAssets):
             if self.current_count >= self.limit_count:
                 logger.info("Count out")
                 break
-            if not self.is_ticket():
-                break
             # 2
             self.wait_until_appear(self.I_FIRE)
-
+            # 判断是否还有挑战次数
+            if not self.is_ticket():
+                break
             # 点击战斗
 
             logger.info("Click battle")
