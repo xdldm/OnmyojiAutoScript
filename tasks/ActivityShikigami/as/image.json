@@ -2,10 +2,19 @@
   {
     "itemName": "fire",
     "imageName": "as_fire.png",
-    "roiFront": "1137,578,100,100",
-    "roiBack": "1137,578,100,100",
+    "roiFront": "1120,567,100,100",
+    "roiBack": "1120,567,100,100",
     "method": "Template matching",
     "threshold": 0.8,
     "description": "战斗按钮"
+  },
+  {
+    "itemName": "",
+    "imageName": "as_.png",
+    "roiFront": "1118,568,100,100",
+    "roiBack": "1118,568,100,100",
+    "method": "Template matching",
+    "threshold": 0.8,
+    "description": "description"
   }
 ]

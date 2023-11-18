@@ -12,11 +12,13 @@ class ActivityShikigamiAssets:
 
 	# Image Rule Assets
 	# 战斗按钮 
-	I_FIRE = RuleImage(roi_front=(1137,578,100,100), roi_back=(1137,578,100,100), threshold=0.8, method="Template matching", file="./tasks/ActivityShikigami/as/as_fire.png")
+	I_FIRE = RuleImage(roi_front=(1120,567,100,100), roi_back=(1120,567,100,100), threshold=0.8, method="Template matching", file="./tasks/ActivityShikigami/as/as_fire.png")
+	# description 
+	I_ = RuleImage(roi_front=(1118,568,100,100), roi_back=(1118,568,100,100), threshold=0.8, method="Template matching", file="./tasks/ActivityShikigami/as/as_.png")
 
 
 	# Ocr Rule Assets
 	# 挑战次数 
-	O_NUMBER = RuleOcr(roi=(1167,673,86,33), area=(0,0,100,100), mode="DigitCounter", method="Default", keyword="", name="number")
+	O_NUMBER = RuleOcr(roi=(1180.6000000000001,672.4000000000001,86,33), area=(0,0,100,100), mode="DigitCounter", method="Default", keyword="", name="number")
 
 
